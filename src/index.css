@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 220 20% 6%;
+  --foreground: 0 0% 95%;
+  --primary: 145 72% 40%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 15% 14%;
+  --secondary-foreground: 0 0% 90%;
+  --muted: 220 15% 18%;
+  --muted-foreground: 220 10% 55%;
+  --accent: 145 72% 50%;
+  --accent-foreground: 0 0% 100%;
+  --card: 220 18% 10%;
+  --card-foreground: 0 0% 92%;
+  --border: 220 15% 18%;
+  --radius: 0.75rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+}
